@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/postText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/likeButton"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:text="Likes:"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/amountOfLikes"
+            android:layout_width="42dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="0dp"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="50dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/purple_200"/>
+
+    </LinearLayout>
+</LinearLayout>
