@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".LoginActivity">
+
         <TextView
             android:id="@+id/textLogin"
             android:layout_width="100dp"
-            android:layout_height="51dp"
-            android:textSize="40sp"
+            android:layout_height="55dp"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="50dp"
-            android:text="Login" />
+            android:layout_marginEnd="125dp"
+            android:text="Login"
+            android:textSize="40sp" />
 
         <EditText
             android:id="@+id/login"
-            android:layout_width="200dp"
+            android:layout_width="350dp"
             android:layout_height="60dp"
-            android:textSize="40sp"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="15dp"
+            android:textSize="35sp" />
 
         <TextView
             android:id="@+id/textPassword"
@@ -31,46 +31,48 @@
             android:layout_height="55dp"
             android:layout_marginStart="160dp"
             android:layout_marginTop="5dp"
-            android:textSize="40sp"
-            android:layout_marginEnd="165dp"
-            android:text="Password" />
+            android:layout_marginEnd="235dp"
+            android:text="Password"
+            android:textSize="35sp" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="200dp"
+            android:layout_width="350dp"
             android:layout_height="60dp"
-            android:textSize="40sp"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="15dp"
+            android:password="true"
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/textInfo"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:textSize="15sp"
-            android:gravity="center" />
-        <LinearLayout
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
             android:gravity="center"
-            android:layout_marginTop="0dp" >
+            android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/loginButton"
-            android:layout_width="95dp"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginTop="5dp"
-            android:text="Login" />
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/createButton"
-            android:layout_width="95dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="18sp"
-            android:text="Create" />
+                <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="Login"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/createButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Create"
+                    android:textSize="18sp" />
         </LinearLayout>
 
 </LinearLayout>

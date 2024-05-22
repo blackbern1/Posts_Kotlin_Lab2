@@ -8,39 +8,79 @@
     <TextView
         android:id="@+id/postText"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:textSize="18sp"/>
+        android:layout_height="100dp"
+        android:background="@drawable/border_for_text"
+        android:textSize="27sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:orientation="horizontal">
 
         <TextView
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginTop="3dp"
+            android:text="№"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/idPost"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <Button
             android:id="@+id/likeButton"
             android:layout_width="48dp"
             android:layout_height="50dp"
-            android:text="Likes:"
-            android:textSize="18sp"/>
+            android:background="@color/white"
+            android:layout_marginTop="3dp"
+            android:text="♥"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/amountOfLikes"
-            android:layout_width="42dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="0dp"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
             android:textAlignment="center"
             android:textColor="@color/teal_700"
-            android:textSize="18sp"/>
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="Posted by:"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/username"
-            android:layout_width="110dp"
+            android:layout_width="125dp"
             android:layout_height="50dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
             android:textAlignment="center"
-            android:textSize="18sp"
-            android:textColor="@color/purple_200"/>
+            android:textColor="@color/orange"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:layout_marginTop="3dp"
+            android:text="✕"
+            android:textColor="#FF0000"
+            android:textSize="20sp"/>
 
     </LinearLayout>
 </LinearLayout>

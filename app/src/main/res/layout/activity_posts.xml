@@ -1,67 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PostsActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:id="@+id/main"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".PostsActivity">
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:orientation="horizontal" >
-        <TextView
-            android:id="@+id/greetingMessage"
-            android:layout_width="300dp"
-            android:textColor="@color/purple_200"
-            android:layout_height="match_parent"
-            android:textSize="40sp"/>
-        <Button
-            android:id="@+id/exitButton"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Выход"/>
-        </LinearLayout>
-
-
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/listOfPosts"
-            />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <EditText
+            <LinearLayout
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:id="@+id/postText"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:textAlignment="center" />
-
+                android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/greetingMessage"
+                android:layout_width="330dp"
+                android:textColor="@color/purple_200"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:textSize="20sp"/>
             <Button
-                android:layout_width="200dp"
-                android:layout_height="60dp"
-                android:id="@+id/sendPostButton"
-                android:layout_gravity="center_horizontal"
-                android:text="POST"
-                android:textSize="30sp"/>
+                android:id="@+id/exitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Выход"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="41dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:text="Имя:"/>
+
+                <EditText
+                    android:id="@+id/findNameField"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:focusable="auto"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/findButton"
+                    android:layout_width="40sp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="-2dp"
+                    android:text="🔍" />
+
+                <TextView
+                    android:layout_width="57dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:text="Лайки:"/>
+
+                <Button
+                    android:id="@+id/sortBelowButton"
+                    android:layout_width="40sp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="-2dp"
+                    android:text="▼" />
+
+                <Button
+                    android:id="@+id/sortAboveButton"
+                    android:layout_width="40sp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="-2dp"
+                    android:textAlignment="gravity"
+                    android:text="▲"/>
+
+                <Button
+                    android:id="@+id/stashButton"
+                    android:layout_width="40sp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="-2dp"
+                    android:text="≡"/>
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:fillViewport="true">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/listOfPosts"
+                    android:background="@drawable/border" />
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:id="@+id/postText"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border"/>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/sendPostButton"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="POST"
+                    android:textSize="30sp"/>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>

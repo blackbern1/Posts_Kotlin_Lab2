@@ -6,11 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".PostsActivity"
-    android:baselineAligned="false">
+    tools:context=".PostsActivity">
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_width="815dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:fillViewport="true">
@@ -34,40 +34,110 @@
 
             <TextView
                 android:id="@+id/greetingMessage"
-                android:layout_width="260dp"
-                android:layout_height="match_parent"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
                 android:textColor="@color/purple_200"
-                android:textSize="40sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/exitButton"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_width="80dp"
+                android:layout_height="35sp"
                 android:text="Выход" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="41dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:text="Имя:"/>
+
+            <EditText
+                android:id="@+id/findNameField"
+                android:layout_width="193dp"
+                android:layout_height="40dp"
+                android:focusable="auto"
+                android:gravity="center_vertical"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/findButton"
+                android:layout_width="40sp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="-2dp"
+                android:text="🔍" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="57dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:text="Лайки:"/>
+
+            <Button
+                android:id="@+id/sortBelowButton"
+                android:layout_width="40sp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-2dp"
+                android:layout_marginLeft="25sp"
+                android:text="▼" />
+
+            <Button
+                android:id="@+id/sortAboveButton"
+                android:layout_width="40sp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-2dp"
+                android:layout_marginLeft="25sp"
+                android:textAlignment="gravity"
+                android:text="▲"/>
+
+            <Button
+                android:id="@+id/stashButton"
+                android:layout_width="40sp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25sp"
+                android:layout_marginTop="-2dp"
+                android:text="≡"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
 
             <EditText
                 android:id="@+id/postText"
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginRight="30dp"
+                android:background="@drawable/border"
                 android:textAlignment="center" />
 
             <Button
                 android:id="@+id/sendPostButton"
-                android:layout_width="200dp"
+                android:layout_width="150dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="20dp"
                 android:text="POST"
                 android:textSize="30sp" />
         </LinearLayout>
