@@ -1,6 +1,5 @@
 package com.example.lab2
 
-import Post
 import User
 import android.content.Intent
 import android.os.Bundle
@@ -11,8 +10,6 @@ import androidx.activity.ComponentActivity
 
 class LoginActivity : ComponentActivity() {
     private lateinit var dbHelper: SQLDatabase
-    private var usersArray = mutableListOf<User>()
-    private var postsArray = mutableListOf<Post>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
